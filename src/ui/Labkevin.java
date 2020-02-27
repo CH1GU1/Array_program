@@ -43,6 +43,13 @@ public class Labkevin{
 	private static int[] arrayMove1;
 	private static int[] arrayMove2;
 	private static int[] arrayMove3;
+/**
+*This method initialize the size of arrays.
+*<b>pre:</b> Arrays are already created.<br>
+*<b>pre:</b> The size must be entire.<br>
+*
+*<b>post:</b> The size will be set.<br>
+*/
 public static void initialize() {
 	sc = new Scanner(System.in);
 	array1 = new int[size1];
@@ -52,7 +59,16 @@ public static void initialize() {
 	arrayMove2 = new int[size2];
 	arrayMove3 = new int[size3];
   } 
-public static void stringInput() {
+/**
+*This method save the strings entered by user.
+*<b>pre:</b> Strings are already initialized.<br>
+*
+*<b>post:</b> The strings are already saved.<br>
+*
+*@param string1, string2, string3 are the strings.
+*
+*/  
+public static void stringInput(String string1, String string2, String string3) {
 	  System.out.println("Esta es la opción #1: Ingrese tres cadenas de caracteres");
 				System.out.println("Ingrese la primera cadena de caracteres");
 				string1=sc.next();
@@ -80,15 +96,15 @@ public static void stringInput() {
 	
 	switch(option) {
         case option_stringLenght:
-          stringLength();
+          stringLength(string1, string2, string3);
 		  exit = false;
 			break;
 		case option_stringConcatenate:
-		stringConcatenate();
+		stringConcatenate(string1,string2,string3);
 		exit = false;
 			break;
 		  case option_stringPosition:
-		  ubicationCharacter();
+		  ubicationCharacter(string1,string2,string3);
 		exit = false;
 			break;
 		case exit_menu:
@@ -97,7 +113,16 @@ public static void stringInput() {
   }	
   }
   }
-public static void stringLength() {
+/**
+*This method show the length of strings.
+*<b>pre:</b> Strings are already saved.<br>
+*
+*<b>post:</b> Will show the length for each string.<br>
+*
+*@param string1, string2, string3 are the strings.
+*
+*/  
+public static void stringLength(String string1, String string2, String string3) {
 		System.out.println("La longitud de "+string1+" es: "+string1.length());
 				System.out.println();
    
@@ -107,11 +132,33 @@ public static void stringLength() {
 		System.out.println("La longitud de "+string3+" es: "+string3.length());
 				System.out.println();
   }
-public static void stringConcatenate() {
+/**
+*This method concatenate the strings entered by user.
+*<b>pre:</b> Strings are already saved.<br>
+*
+*<b>post:</b> Will show the strings concatenated.<br>
+*
+*@param string1, string2, string3 are the strings.
+*
+*/
+public static void stringConcatenate(String string1, String string2, String string3) {
   System.out.println("Concatenado es de la siguiente forma:");
 				System.out.println(new StringBuilder().append(" "+string1).append(" "+string2).append(" "+string3)+"\n");
 	}
-public static void ubicationCharacter() {
+/**
+*This method show the strings characters of a position joined by user.
+*<b>pre:</b> Strings are already saved.<br>
+*<b>pre:</b> Position of string must be an integer value.<br>
+*
+*<b>post:</b> Will show the character of a position of the strings.<br>
+*
+*@param string1, string2, string3 are the strings.
+*@param choice_character is the integer value of position in the strings.
+*
+*@throws Exception if position is greater than strings length, will show a message.
+*  
+*/
+public static void ubicationCharacter(String string1, String string2, String string3) {
 	  System.out.println("Ingrese la posicion de la letra de la cadena que desea saber");
 	  choice_character = sc.nextInt();
 	  sc.nextLine();
@@ -132,6 +179,15 @@ public static void ubicationCharacter() {
 	  System.out.println("***La posicion #"+choice_character+"  no está dentro de la cadena "+string3+"*** \n");
   }
   }
+/**
+*This method save the real values entered by user.
+*<b>pre:</b> User must entry double values.<br>
+*
+*<b>post:</b> values are already saved.<br>
+*
+*@param rNum1,rNUM2 are varaibles to save double values.
+*  
+*/  
 public static void realEntry(){
 	  System.out.println("Esta es la opción #2: Ingrese dos reales mayores a cero");
 	  System.out.println();
@@ -143,6 +199,19 @@ public static void realEntry(){
 	  rNum2=sc.nextDouble();	
 	  sc.nextLine();  
   }
+/**
+*This method show the values entered by user and deploy a sub-menu.
+*
+*<b>pre:</b> values are already saved.<br>
+*<b>pre:</b> values are differents of cero.<br>
+*
+*<b>post:</b> values are displayed and user have the option to reentry values or exit to main menu.<br>
+*
+*@param rNum1,rNUM2 are double values displayed.
+*  
+*@throws Exception if position is greater than strings length, will show a message.
+*  
+*/    
 public static void realOut(){
   if(rNum1<=0)
 		System.out.println("porfavor ingrese un real valido "+rNum1+" No es valido");
@@ -170,22 +239,73 @@ public static void realOut(){
 		
   }
   }
+/**
+*This method makes the division of rNum1 and rNUM2.
+*
+*<b>pre:</b> values are already saved.<br>
+*
+*<b>post:</b> Make the division.<br>
+*
+*@param rNum1,rNUM2 are double values.
+*@param real_result is the double result.
+*  
+*@Return is the result of the division.
+*  
+*/    
 public static double realDivision(){
 	real_result=rNum1/rNum2;
 	return real_result;
   }
+/**
+*This method makes the division of the integer value of rNum1 and rNUM2.
+*
+*<b>pre:</b> values are already saved.<br>
+*
+*<b>post:</b> Make the division between the integer value of the double variables.<br>
+*
+*@param rNum1,rNUM2 are double values.
+*@param n1,n2 are the integer values of the double values of rNum1 and rNum2.
+*@param int_division is the division by integer result.
+*  
+*@Return is the result of the integer division.
+*  
+*/   
 public static double intDivision(){ 
 	  int n1 = (int)rNum1;
 	  int n2 = (int)rNum2;
 	  int_division = n1/n2;
 	  return int_division;
-  }	
+  }
+/**
+*This method makes the module of the integer value of rNum1 and rNUM2.
+*
+*<b>pre:</b> values are already saved.<br>
+*
+*<b>post:</b> Make the module between the integer value of the double variables.<br>
+*
+*@param rNum1,rNUM2 are double values.
+*@param n1,n2 are the integer values of the double values of rNum1 and rNum2.
+*@param real_residue is the result of the integer module.
+*  
+*@Return is the result of the integer module.
+*  
+*/     
 public static double intResidue(){	 
 	  int n1 = (int)rNum1;
 	  int n2 = (int)rNum2;
 	  real_residue = n1%n2;
 	  return real_residue;
   }
+/**
+*This method save the size of the arrays.
+*
+*<b>pre:</b> values of size must be integer.<br>
+*
+*<b>post:</b> Arrays sizes are already saved.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*    
+*/   
 public static void sizeEntry(){	  
 	 System.out.println("Esta es la opción #3: Ingrese tres arreglos de numeros enteros");
 	 System.out.println();
@@ -205,6 +325,18 @@ public static void sizeEntry(){
 	System.out.println();	 
 	  
   }
+/**
+*This method saves the values of arrays and deploy it, this method deploy too a menu of functions to do later with arrays.
+*
+*<b>pre:</b> values of size must saved by user.<br>
+*
+*<b>post:</b> Arrays values are saved.<br>
+*<b>post:</b> Each arrays are deployed.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*    
+*/  
 public static void arrayEntry(){	
 		System.out.println("Ingrese hasta "+size1+" enteros para el primer arreglo");
 	 for(int i = 0; i < array1.length; i++) {
@@ -308,6 +440,19 @@ System.out.println();
 		}	
 	}
 }
+/**
+*This method deploy a menu to choose one array and then makes the average of an array (the user decide which one).
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*
+*<b>post:</b> Deploy the average of the array decided by user.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*@param SUM1,SUM2,SUM3 are the total of the addition of values for each array.
+*@param DIV1,DIV2,DIV3 are the results of the average for each array.
+*    
+*/  
 public static void arrayAverage(){	
 	System.out.println("¿Cual arreglo desea saber el promedio?");
         System.out.println();
@@ -342,46 +487,75 @@ public static void arrayAverage(){
 			System.out.println();
 		}
 }
+/**
+*This method deploy a menu to choose one array and then show the higher value of an array (the user decide which one).
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*
+*<b>post:</b> Deploy the higher value of the array decided by user.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*@param higher_value will be the varible to save the higher value.
+*    
+*/  
 public static void arrayHigher(){
 System.out.println("¿De cual arreglo desea saber el mayor entero?");
         System.out.println();
 		System.out.println("(1)Arreglo #1\n (2)Arreglo #2\n (3)Arreglo #3\n");
 		option = sc.nextInt();
 		if(option == 1){
-			int mayor, menor;
-			mayor = menor = array1[0];
+			int higher_value;
+			higher_value = array1[0];
 			for(int i = 0; i<array1.length; i++){
-				if(array1[i]>mayor){
-					mayor = array1[i];
+				if(array1[i]>higher_value){
+					higher_value = array1[i];
 				}	
 			}
-			System.out.println("El mayor entero del arreglo #1 fue: "+mayor);			
+			System.out.println("El mayor entero del arreglo #1 fue: "+higher_value);			
 		}
 		
 		else if(option == 2){
-			int mayor, menor;
-			mayor = menor = array2[0];
+			int higher_value;
+			higher_value = array2[0];
 			for(int i = 0; i<array2.length; i++){
-				if(array2[i]>mayor){
-					mayor = array2[i];
+				if(array2[i]>higher_value){
+					higher_value = array2[i];
 				}	
 			}
-			System.out.println("El mayor entero del arreglo #2 fue: "+mayor);			
+			System.out.println("El mayor entero del arreglo #2 fue: "+higher_value);			
 		}
 		
 		else if(option == 3){
-			int mayor, menor;
-			mayor = menor = array3[0];
+			int higher_value;
+			higher_value = array3[0];
 			for(int i = 0; i<array3.length; i++){
-				if(array3[i]>mayor){
-					mayor = array3[i];
+				if(array3[i]>higher_value){
+					higher_value = array3[i];
 				}	
 			}
-			System.out.println("El mayor entero del arreglo #3 fue: "+mayor);			
+			System.out.println("El mayor entero del arreglo #3 fue: "+higher_value);			
 		} else {
 			System.out.println("Ingrese una opcion valida");
 		}
 }
+/**
+*This method deploy a menu to choose between addition, subtraction or multiply two arrays (the user decide which one), and then the arrays are operated.
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*
+*<b>post:</b> Deploy the addition between the values of two array decided by user.<br>
+*<b>post:</b> Deploy the subtraction between the values of two array decided by user.<br>
+*<b>post:</b> Deploy the multiply between the values of two array decided by user.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*@param totalSum is the result of addition between arrays for each position.
+*@param totalSubtraction is the result of subtraction between arrays for each position.
+*@param totalMult is the result of multiply between arrays for each position.
+*@param option is the user decision between the operations.
+*    
+*/  
 public static void arrayOperation(){	
 	System.out.println("¿Que operacion desea realizar?"); 
 		System.out.println();
@@ -525,6 +699,19 @@ public static void arrayOperation(){
 			}
 		 }
 }
+/**
+*This method show two types of union between the arrays, first one is the union all values of every arrays and the second one is the union of every arrays without duplicate values.
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*
+*<b>post:</b> Array4 is created to makes the union of array1, array2 and array3.<br>
+*<b>post:</b> Array4 have the addition of size1, size2 and size3.<br>
+*<b>post:</b> Show the both types of union between every arrays.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] Array4[] are arrays.
+*    
+*/  
 public static void arrayUnion(){
 array4 = new int[array1.length+array2.length+array3.length];
 
@@ -568,6 +755,18 @@ for(int k = 0; k < j; k++){
 }
 System.out.println();
 }
+/**
+*This method show the interseccion between the arrays.
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*<b>pre:</b> Arrays values must be common for the three arrays.<br>
+*
+*<b>post:</b> Show the interseccion between the values in common of every arrays.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*    
+*/  
 public static void intersection(){
 int x =0, y=0, z=0;
 System.out.println("La interseccion de los arreglos es: ");
@@ -592,6 +791,20 @@ while(x<array1.length && y<array2.length && z<array3.length){
 }
 System.out.println();
 }
+/**
+*This method makes the rotation of each array (the user choose which one).
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*<b>pre:</b> An array only can rotate of it maximum of length.<br>
+*
+*<b>post:</b> Show the array moved to the right the times that the user decided.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*@param move is the quantity to move an array.
+* 
+*@throws Exception if the integer to rotate the array is higher than the array length, will show a message.   
+*/  
 public static void rotation(){
 System.out.println("¿Cual de los arreglos desea rotar?");	
 System.out.println("");
@@ -689,6 +902,21 @@ System.out.println("\nElementos desplazados: ");
 }
 }
 }
+/**
+*This method organize from least to greatest values each array by the bubble method (the user choose which one).
+*
+*<b>pre:</b> Arrays values are saved.<br>
+*<b>pre:</b> Just an option between 1 and 3.<br>
+*
+*<b>post:</b> Show the chosen array organized.<br>
+*
+*@param size1,size2,size3 are integer values and the sizes for each array.
+*@param array1[],array2[],array3[] are arrays.
+*@param move is the quantity to organize an array.
+*@param option is the array that user decide to use to organize.
+* 
+*@throws Exception if the integer to rotate the array is higher than the array length, will show a message.   
+*/   
 public static void arrayOrder(){
 System.out.println("¿Cual de los arreglos desea ordenar?");	
 System.out.println("");
@@ -744,6 +972,17 @@ else if(option == 3){
 			}
 	} 
 }
+/**
+*This method deploy the main menu of the program.
+*
+*<b>pre:</b> Just an option between 1 and 3.<br>
+*
+*<b>post:</b> Perform a series of methods according to your choice.<br>
+*
+*@param option is the function of the chosen program.
+* 
+*@throws Exception if option is not allowed, will show a message.   
+*/   
 static void menu() {
 	System.out.println("-------------MENU #1 DE OPCIONES-------------");
 	System.out.println();
@@ -754,7 +993,7 @@ static void menu() {
 	 
 	switch(option) {
         case option_stringEntry:
-          stringInput();
+          stringInput(string1,string2,string3);
         break;
 		case option_realEntry:
 			realEntry();
@@ -764,6 +1003,10 @@ static void menu() {
 			sizeEntry();
 			initialize();
 			arrayEntry();
+		break;
+		default:
+		System.out.println("***Elije una opcion valida***");
+		menu();
 		break;
 	}
 		
