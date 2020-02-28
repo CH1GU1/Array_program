@@ -71,18 +71,14 @@ public static void initialize() {
 public static void stringInput(String string1, String string2, String string3) {
 	  System.out.println("Esta es la opción #1: Ingrese tres cadenas de caracteres");
 				System.out.println("Ingrese la primera cadena de caracteres");
-				string1=sc.next();
-				sc.nextLine();
+				string1=sc.nextLine();
 				
 				System.out.println("Ingrese la segunda cadena de caracteres");	
-				string2=sc.next();
-				sc.nextLine();
+				string2=sc.nextLine();
 				
 				System.out.println("Ingrese la tercera cadena de caracteres");
-				string3=sc.next();
-				sc.nextLine();
+				string3=sc.nextLine();
 				System.out.println();
-  
   
   boolean exit = false;
   if(exit=false)
