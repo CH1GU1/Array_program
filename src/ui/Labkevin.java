@@ -65,7 +65,9 @@ public static void initialize() {
 *
 *<b>post:</b> The strings are already saved.<br>
 *
-*@param string1, string2, string3 are the strings.
+*@param string1, is string.
+*@param string2, is string.
+*@param string3, is string.
 *
 */  
 public static void stringInput(String string1, String string2, String string3) {
@@ -115,7 +117,9 @@ public static void stringInput(String string1, String string2, String string3) {
 *
 *<b>post:</b> Will show the length for each string.<br>
 *
-*@param string1, string2, string3 are the strings.
+*@param string1, is string.
+*@param string2, is string.
+*@param string3, is string.
 *
 */  
 public static void stringLength(String string1, String string2, String string3) {
@@ -134,7 +138,9 @@ public static void stringLength(String string1, String string2, String string3) 
 *
 *<b>post:</b> Will show the strings concatenated.<br>
 *
-*@param string1, string2, string3 are the strings.
+*@param string1, is string.
+*@param string2, is string.
+*@param string3, is string.
 *
 */
 public static void stringConcatenate(String string1, String string2, String string3) {
@@ -148,10 +154,9 @@ public static void stringConcatenate(String string1, String string2, String stri
 *
 *<b>post:</b> Will show the character of a position of the strings.<br>
 *
-*@param string1, string2, string3 are the strings.
-*@param choice_character is the integer value of position in the strings.
-*
-*@throws Exception if position is greater than strings length, will show a message.
+*@param string1, is string.
+*@param string2, is string.
+*@param string3, is string.
 *  
 */
 public static void ubicationCharacter(String string1, String string2, String string3) {
@@ -180,8 +185,6 @@ public static void ubicationCharacter(String string1, String string2, String str
 *<b>pre:</b> User must entry double values.<br>
 *
 *<b>post:</b> values are already saved.<br>
-*
-*@param rNum1,rNUM2 are varaibles to save double values.
 *  
 */  
 public static void realEntry(){
@@ -202,10 +205,6 @@ public static void realEntry(){
 *<b>pre:</b> values are differents of cero.<br>
 *
 *<b>post:</b> values are displayed and user have the option to reentry values or exit to main menu.<br>
-*
-*@param rNum1,rNUM2 are double values displayed.
-*  
-*@throws Exception if position is greater than strings length, will show a message.
 *  
 */    
 public static void realOut(){
@@ -242,10 +241,8 @@ public static void realOut(){
 *
 *<b>post:</b> Make the division.<br>
 *
-*@param rNum1,rNUM2 are double values.
-*@param real_result is the double result.
 *  
-*@Return is the result of the division.
+*@return is the result of the division.
 *  
 */    
 public static double realDivision(){
@@ -258,12 +255,8 @@ public static double realDivision(){
 *<b>pre:</b> values are already saved.<br>
 *
 *<b>post:</b> Make the division between the integer value of the double variables.<br>
-*
-*@param rNum1,rNUM2 are double values.
-*@param n1,n2 are the integer values of the double values of rNum1 and rNum2.
-*@param int_division is the division by integer result.
 *  
-*@Return is the result of the integer division.
+*@return is the result of the integer division.
 *  
 */   
 public static double intDivision(){ 
@@ -279,11 +272,7 @@ public static double intDivision(){
 *
 *<b>post:</b> Make the module between the integer value of the double variables.<br>
 *
-*@param rNum1,rNUM2 are double values.
-*@param n1,n2 are the integer values of the double values of rNum1 and rNum2.
-*@param real_residue is the result of the integer module.
-*  
-*@Return is the result of the integer module.
+*@return is the result of the integer module.
 *  
 */     
 public static double intResidue(){	 
@@ -298,8 +287,6 @@ public static double intResidue(){
 *<b>pre:</b> values of size must be integer.<br>
 *
 *<b>post:</b> Arrays sizes are already saved.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
 *    
 */   
 public static void sizeEntry(){	  
@@ -328,9 +315,6 @@ public static void sizeEntry(){
 *
 *<b>post:</b> Arrays values are saved.<br>
 *<b>post:</b> Each arrays are deployed.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
 *    
 */  
 public static void arrayEntry(){	
@@ -442,11 +426,6 @@ System.out.println();
 *<b>pre:</b> Arrays values are saved.<br>
 *
 *<b>post:</b> Deploy the average of the array decided by user.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
-*@param SUM1,SUM2,SUM3 are the total of the addition of values for each array.
-*@param DIV1,DIV2,DIV3 are the results of the average for each array.
 *    
 */  
 public static void arrayAverage(){	
@@ -489,10 +468,6 @@ public static void arrayAverage(){
 *<b>pre:</b> Arrays values are saved.<br>
 *
 *<b>post:</b> Deploy the higher value of the array decided by user.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
-*@param higher_value will be the varible to save the higher value.
 *    
 */  
 public static void arrayHigher(){
@@ -544,12 +519,6 @@ System.out.println("¿De cual arreglo desea saber el mayor entero?");
 *<b>post:</b> Deploy the subtraction between the values of two array decided by user.<br>
 *<b>post:</b> Deploy the multiply between the values of two array decided by user.<br>
 *
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
-*@param totalSum is the result of addition between arrays for each position.
-*@param totalSubtraction is the result of subtraction between arrays for each position.
-*@param totalMult is the result of multiply between arrays for each position.
-*@param option is the user decision between the operations.
 *    
 */  
 public static void arrayOperation(){	
@@ -703,9 +672,6 @@ public static void arrayOperation(){
 *<b>post:</b> Array4 is created to makes the union of array1, array2 and array3.<br>
 *<b>post:</b> Array4 have the addition of size1, size2 and size3.<br>
 *<b>post:</b> Show the both types of union between every arrays.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] Array4[] are arrays.
 *    
 */  
 public static void arrayUnion(){
@@ -758,9 +724,6 @@ System.out.println();
 *<b>pre:</b> Arrays values must be common for the three arrays.<br>
 *
 *<b>post:</b> Show the interseccion between the values in common of every arrays.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
 *    
 */  
 public static void intersection(){
@@ -793,13 +756,8 @@ System.out.println();
 *<b>pre:</b> Arrays values are saved.<br>
 *<b>pre:</b> An array only can rotate of it maximum of length.<br>
 *
-*<b>post:</b> Show the array moved to the right the times that the user decided.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
-*@param move is the quantity to move an array.
+*<b>post:</b> Show the array moved to the right the times that the user decided.<br>.
 * 
-*@throws Exception if the integer to rotate the array is higher than the array length, will show a message.   
 */  
 public static void rotation(){
 System.out.println("¿Cual de los arreglos desea rotar?");	
@@ -905,13 +863,7 @@ System.out.println("\nElementos desplazados: ");
 *<b>pre:</b> Just an option between 1 and 3.<br>
 *
 *<b>post:</b> Show the chosen array organized.<br>
-*
-*@param size1,size2,size3 are integer values and the sizes for each array.
-*@param array1[],array2[],array3[] are arrays.
-*@param move is the quantity to organize an array.
-*@param option is the array that user decide to use to organize.
 * 
-*@throws Exception if the integer to rotate the array is higher than the array length, will show a message.   
 */   
 public static void arrayOrder(){
 System.out.println("¿Cual de los arreglos desea ordenar?");	
@@ -974,10 +926,7 @@ else if(option == 3){
 *<b>pre:</b> Just an option between 1 and 3.<br>
 *
 *<b>post:</b> Perform a series of methods according to your choice.<br>
-*
-*@param option is the function of the chosen program.
 * 
-*@throws Exception if option is not allowed, will show a message.   
 */   
 static void menu() {
 	System.out.println("-------------MENU #1 DE OPCIONES-------------");
