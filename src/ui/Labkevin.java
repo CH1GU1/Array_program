@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 public class Labkevin{
+	//Variables and constants declaration
 	static Scanner sc;
 	private static int option;
 	private final static int option_stringEntry = 1;
@@ -71,6 +72,7 @@ public static void initialize() {
 *
 */  
 public static void stringInput(String string1, String string2, String string3) {
+//Strings entry	
 	  System.out.println("Esta es la opción #1: Ingrese tres cadenas de caracteres");
 				System.out.println("Ingrese la primera cadena de caracteres");
 				string1=sc.nextLine();
@@ -81,7 +83,7 @@ public static void stringInput(String string1, String string2, String string3) {
 				System.out.println("Ingrese la tercera cadena de caracteres");
 				string3=sc.nextLine();
 				System.out.println();
-  
+//Deploy sub-menu of strings
   boolean exit = false;
   if(exit=false)
 	  menu();
@@ -123,6 +125,7 @@ public static void stringInput(String string1, String string2, String string3) {
 *
 */  
 public static void stringLength(String string1, String string2, String string3) {
+//String length deploy	
 		System.out.println("La longitud de "+string1+" es: "+string1.length());
 				System.out.println();
    
@@ -144,6 +147,7 @@ public static void stringLength(String string1, String string2, String string3) 
 *
 */
 public static void stringConcatenate(String string1, String string2, String string3) {
+//String concatenated deploy	
   System.out.println("Concatenado es de la siguiente forma:");
 				System.out.println(new StringBuilder().append(" "+string1).append(" "+string2).append(" "+string3)+"\n");
 	}
@@ -160,6 +164,7 @@ public static void stringConcatenate(String string1, String string2, String stri
 *  
 */
 public static void ubicationCharacter(String string1, String string2, String string3) {
+//Entry and deploy the position of string character 
 	  System.out.println("Ingrese la posicion de la letra de la cadena que desea saber");
 	  choice_character = sc.nextInt();
 	  sc.nextLine();
@@ -188,6 +193,7 @@ public static void ubicationCharacter(String string1, String string2, String str
 *  
 */  
 public static void realEntry(){
+//Real number entry 
 	  System.out.println("Esta es la opción #2: Ingrese dos reales mayores a cero");
 	  System.out.println();
 	  System.out.println("Ingrese el primer real");
@@ -208,6 +214,7 @@ public static void realEntry(){
 *  
 */    
 public static void realOut(){
+//Real number validation
   if(rNum1<=0)
 		System.out.println("porfavor ingrese un real valido "+rNum1+" No es valido");
 		
@@ -215,6 +222,7 @@ public static void realOut(){
 		System.out.println("porfavor ingrese un real valido "+rNum2+" No es valido");
 	  
 	else 
+		//Real number deploy and performing requested operations  
 		System.out.println("Sus entradas fueron "+rNum1+" y "+rNum2);
 		System.out.println();
 		System.out.println("La division entre ("+rNum1+") y ("+rNum2+") es: "+realDivision()); 
@@ -223,6 +231,7 @@ public static void realOut(){
 		System.out.println();
 		System.out.println("(2) Volver a ingresar dos reales \n(4) Salir al menu ");
 		option = sc.nextInt();
+		//Sub-menu deploy 
 	switch(option) {
 			case exit_menu:
 			menu();
@@ -246,6 +255,7 @@ public static void realOut(){
 *  
 */    
 public static double realDivision(){
+	//Division between rNum1 and rNUM2
 	real_result=rNum1/rNum2;
 	return real_result;
   }
@@ -259,7 +269,8 @@ public static double realDivision(){
 *@return is the result of the integer division.
 *  
 */   
-public static double intDivision(){ 
+public static double intDivision(){
+//Division between integer part of rNum1 and rNUM2	
 	  int n1 = (int)rNum1;
 	  int n2 = (int)rNum2;
 	  int_division = n1/n2;
@@ -275,7 +286,8 @@ public static double intDivision(){
 *@return is the result of the integer module.
 *  
 */     
-public static double intResidue(){	 
+public static double intResidue(){	
+//Module between integer part of rNum1 and rNUM2 
 	  int n1 = (int)rNum1;
 	  int n2 = (int)rNum2;
 	  real_residue = n1%n2;
@@ -289,7 +301,8 @@ public static double intResidue(){
 *<b>post:</b> Arrays sizes are already saved.<br>
 *    
 */   
-public static void sizeEntry(){	  
+public static void sizeEntry(){	
+//Entry arrays size 
 	 System.out.println("Esta es la opción #3: Ingrese tres arreglos de numeros enteros");
 	 System.out.println();
 	 System.out.println("Ingrese el tamano del primer arreglo de enteros");
@@ -318,7 +331,8 @@ public static void sizeEntry(){
 *    
 */  
 public static void arrayEntry(){	
-		System.out.println("Ingrese hasta "+size1+" enteros para el primer arreglo");
+//Entry values of arrays
+		System.out.println("Ingrese hasta "+size1+" enteros para el primer arreglo"); 
 	 for(int i = 0; i < array1.length; i++) {
 				array1[i] = sc.nextInt();
 				sc.nextLine();
@@ -339,12 +353,13 @@ public static void arrayEntry(){
 				array3[i] = sc.nextInt();
 				sc.nextLine();
 			}
-			System.out.println();	
+			System.out.println();
 			
+//Arrays deploy 			
 	System.out.println("Su arreglo #1 fue: ");			
 	for(int i = 0; i<size1; i++){
 	 for(int j = 0; j<=i; j++){
-		 System.out.print(array1[j]);
+		 System.out.print(" "+array1[j]);
 		}
 		System.out.println();
 	}
@@ -353,7 +368,7 @@ System.out.println();
  System.out.println("Su arreglo #2 fue: ");			
 	for(int i = 0; i<size2; i++){
 	 for(int j = 0; j<=i; j++){
-		 System.out.print(array2[j]);
+		 System.out.print(" "+array2[j]);
 		}
 		System.out.println();
 	}
@@ -362,11 +377,11 @@ System.out.println();
   System.out.println("Su arreglo #3 fue: ");	
   for(int i = 0; i<size3; i++){
 	 for(int j = 0; j<=i; j++){
-		 System.out.print(array3[j]);
+		 System.out.print(" "+array3[j]);
 		}
 		System.out.println();
 	}
-	
+//deploy sub-menu of arrays 	
   boolean exit = false;
   if(exit=false) 
 	  menu();
@@ -428,7 +443,8 @@ System.out.println();
 *<b>post:</b> Deploy the average of the array decided by user.<br>
 *    
 */  
-public static void arrayAverage(){	
+public static void arrayAverage(){
+//Average of the chosen array	
 	System.out.println("¿Cual arreglo desea saber el promedio?");
         System.out.println();
 		System.out.println("(1)Arreglo #1\n (2)Arreglo #2\n (3)Arreglo #3\n");
@@ -471,6 +487,7 @@ public static void arrayAverage(){
 *    
 */  
 public static void arrayHigher(){
+//Deploys the hisgher value of chosen array	
 System.out.println("¿De cual arreglo desea saber el mayor entero?");
         System.out.println();
 		System.out.println("(1)Arreglo #1\n (2)Arreglo #2\n (3)Arreglo #3\n");
@@ -521,11 +538,13 @@ System.out.println("¿De cual arreglo desea saber el mayor entero?");
 *
 *    
 */  
-public static void arrayOperation(){	
+public static void arrayOperation(){
+//Deploys sub-menu to operate arrays	
 	System.out.println("¿Que operacion desea realizar?"); 
 		System.out.println();
 		System.out.println("(1)Suma\n (2)Resta\n (3)Multiplicacion\n ");
 		option = sc.nextInt();
+		//Adttion between arrays
 		if(option == 1){
 			System.out.println("¿Cuales arreglos desea sumar?");
 			System.out.println("Opcion(1): Arreglo #1 + Arreglo#2\n Opcion(2): Arreglo#1 + Arreglo#3\n Opcion(3): Arreglo#2 + Arreglo#3\n");
@@ -560,6 +579,7 @@ public static void arrayOperation(){
 				System.out.println("Ingrese una opcion valida");
 			}
 		 }
+		 //Subtraction between arrays
 		 else if(option == 2){
 			System.out.println("Elija un arreglo");
 			System.out.println("Opcion(1): Arreglo #1\n Opcion(2): Arreglo#2\n Opcion(3): Arreglo#3\n");
@@ -628,7 +648,7 @@ public static void arrayOperation(){
 				 System.out.println();
 				 System.out.println("Elija una opcion valida");
 			 }
-			 
+		//Multiply arrays	 
 		} else if (option == 3) {
 			System.out.println("¿Cuales arreglos desea multiplicr?");
 			System.out.println("Opcion(1): Arreglo #1 * Arreglo#2\n Opcion(2): Arreglo#1 * Arreglo#3\n Opcion(3): Arreglo#2 * Arreglo#3\n");
@@ -727,6 +747,7 @@ System.out.println();
 *    
 */  
 public static void intersection(){
+//Intersection between the three arrays (only common elements between all arrays)	
 int x =0, y=0, z=0;
 System.out.println("La interseccion de los arreglos es: ");
 while(x<array1.length && y<array2.length && z<array3.length){
@@ -747,8 +768,8 @@ while(x<array1.length && y<array2.length && z<array3.length){
 	}else{
 		x++;
 	}
-}
 System.out.println();
+}
 }
 /**
 *This method makes the rotation of each array (the user choose which one).
@@ -760,6 +781,7 @@ System.out.println();
 * 
 */  
 public static void rotation(){
+//Displacement of values positions on arrays
 System.out.println("¿Cual de los arreglos desea rotar?");	
 System.out.println("");
 System.out.println("Opcion(1): Arreglo #1\n Opcion(2): Arreglo#2\n Opcion(3): Arreglo#3\n");	
@@ -866,13 +888,14 @@ System.out.println("\nElementos desplazados: ");
 * 
 */   
 public static void arrayOrder(){
+//Select array to organize	
 System.out.println("¿Cual de los arreglos desea ordenar?");	
 System.out.println("");
 System.out.println("Opcion(1): Arreglo#1\n Opcion(2): Arreglo#2\n Opcion(3): Arreglo#3\n");	
 option = sc.nextInt();
 
 if(option == 1){	
-	
+	//Bubble method to organize array
 	for(int i = 0; i < (size1-1); i++){
 		for(int j =0; j < (size1-1); j++){
 			if(array1[j]>array1[j+1]){
@@ -929,6 +952,7 @@ else if(option == 3){
 * 
 */   
 static void menu() {
+//Main menu of the program with three cases (strings, real numbers and arrays)	
 	System.out.println("-------------MENU #1 DE OPCIONES-------------");
 	System.out.println();
     System.out.println("(1) INGRESAR CADENAS \n (2) INGRESAR DOS NUMEROS REALES MAYORES A CERO  \n (3) INGRESAR TRES ARREGLOS DE NUMEROS ENTEROS \n");
